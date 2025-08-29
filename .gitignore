@@ -1,0 +1,8 @@
+# big file  that github not store 
+Videos
+# waste to show this is only duplicate java to class when code execute 
+*.class
+# auto trigger
+DSA/Basics/tempCodeRunnerFile.java
+# setting compiling using file
+.vscode
