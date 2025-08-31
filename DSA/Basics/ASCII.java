@@ -32,3 +32,35 @@ public class ASCII {
     }
     
 }
+
+
+/*
+ #include <iostream>
+using namespace std;
+
+int main() {
+    char ch = 'A';
+    cout << ch;
+    // using type cast to print ascii value
+
+    // implicit typecasting -> automatically done
+    int x = ch;
+    cout << x << endl;
+
+    char name = '$';
+    cout << name;
+
+    // explicit typecasting
+    int y = (int)name;
+    cout << y << endl;
+
+    char hash = '|';
+    cout << hash;
+    // explicit
+
+    int z = (int)hash;
+    cout << z << endl;
+
+    return 0;
+}
+ */

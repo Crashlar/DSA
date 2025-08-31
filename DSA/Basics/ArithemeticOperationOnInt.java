@@ -10,3 +10,19 @@ public class ArithemeticOperationOnInt {
 
     }
 }
+
+/*
+ #include <iostream>
+using namespace std;
+
+int main() {
+    double x = 4, y = 14;
+
+    cout << x + y << endl;
+    cout << x - y << endl;
+    cout << x * y << endl;
+    cout << x / y << endl;
+
+    return 0;
+}
+ */
