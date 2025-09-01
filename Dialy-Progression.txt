@@ -7,7 +7,7 @@
 
 
 ------------------------------------------------------------Now Start-----------------------------------------------------------------------------------------------------
-Friday 29/08/2025 7:54 Pm 
+Friday 29/08/2025    Starttime - 7:54 Pm 
 
 
 
@@ -16,3 +16,195 @@ Friday 29/08/2025 7:54 Pm
 ____________________________________________________________Day 2_______________________________________________________________________________________________
 Sunday 31/08/2025     Starttime - 4:10 Pm 
 
+
+____________________________________________________________Day 3_______________________________________________________________________________________________
+Sunday 1/09/2025     Starttime - 10 Am  
+
+
+function - 
+    y = f(x) = x^2 + 3 
+        f(x) -> output
+        x^2 + 3 -> input
+
+What is int main()-
+    - main function always works firstly then others func 
+    - this is only once  created 
+
+Syntax- 
+    <void/int/float> function_name(int a  , int b , int c ){
+        function_body 
+    }
+
+Builtin Function    
+    - min()
+    - max()
+    
+
+Me :-
+Function Basic :-  
+    Definition & Declaration: 
+        A function is a building block of C++ programs that contains a set of statements which are executed when the functions is called. It can take some input data, performs the given task, and return some result. A function can be called from anywhere in the program and any number of times increasing the modularity and reusability.
+    
+        Syntax : 
+            return_type name() {
+            // Function body
+            }
+    Return types (void, int, etc.): 
+        Void functions do not have a return type, but they can do return values
+            1. A Void Function Can Return: We can simply write a return statement in a void fun(). In fact, it is considered a good practice (for readability of code) to write a return; statement to indicate the end of the function.
+            ``` code 
+
+            2. A void fun() can return another void function: A void function can also call another void function while it is terminating.
+            ``` code
+            // C++ code to demonstrate void()
+            // returning void()
+            #include <iostream>
+            using namespace std;
+
+            // A sample void function
+            void work()
+            {
+                cout << "The void function has returned "
+                        " a void() !!! \n";
+            }
+
+            // Driver void() returning void work()
+            void test()
+            {
+                // Returning void function
+                return work();
+            }
+
+            // Driver Code
+            int main()
+            {
+                // Calling void function
+                test();
+                return 0;
+            }
+            ```
+
+            3. A void() can return a void value: A void() cannot return a value that can be used. But it can return a value that is void without giving an error
+            ``` code 
+            // C++ code to demonstrate void()
+            // returning a void value
+            #include <iostream>
+            using namespace std;
+
+            // Driver void() returning a void value
+            void test()
+            {
+                cout << "Hello";
+
+                // Returning a void value
+                return (void)"Doesn't Print";
+            }
+
+            // Driver Code
+            int main()
+            {
+                test();
+                return 0;
+            }
+            ``` end
+
+    Function calling : 
+        - Function Calling involves specifying the function's name followed by parentheses(). If the function requires input values, known as parameters, then they are passed inside the parentheses as arguments. When the function is called, the program execution jumps to the function's code block, executes it, and then returns control to the point in the program where the function was called.
+        // calling the function
+        function_name(argument_1, argument_2, argument_3, ...)
+
+Function Parameters :
+    Pass by value -  
+        When you pass a parameter by value, the function receives a copy of the original value. The function works with this copy, and any changes made to the parameter inside the function do not affect the original value outside the function.
+
+        Key Points:
+            - The original data remains unchanged because the function operates on a copy.
+            - This is safe because the original value is protected from modification.
+            - It can be less efficient for large data (like big objects or structures) because copying takes time and memory.
+    Pass by reference (int &x) : 
+        When you pass by reference, the function receives the actual original variable, not a copy. Any changes made to the parameter inside the function will affect the original value outside the function.
+
+        Key Points : 
+            - The original data can be modified by the function.
+            - This is efficient because no copy is made, even for large data.
+            - Useful when you want the function to modify the original variable or avoid the overhead of copying.
+    Pass by pointer (int* x) : 
+        When you pass by pointer, the function receives the memory address (pointer) of the original variable. The function can use this address to access or modify the original value.
+        Key Points:
+            - Like pass by reference, the original data can be modified by the function.
+            - Requires explicit dereferencing to access or modify the value (unlike references, which work like the  original variable).
+            - Pointers can be reassigned to point to other data, while references cannot be reassigned after initialization.
+            - Can be used to pass "null" (no data), which is not possible with references.
+
+Function Overloading : 
+    Function overloading improves clarity and reusability in DSA by letting one function name handle multiple variants. It’s widely used in sorting, searching, graph algorithms, and math operations to keep code clean and intuitive.
+    Why Use Function Overloading in DSA? : 
+        1. Improves Code Clarity
+            Instead of having different names for similar operations (e.g., search_array, search_linkedlist), we use one logical name (search) with different parameters.
+            Example:
+                sort(arr) for arrays
+                sort(list) for linked lists
+
+        2. Handles Different Data Types
+            A single function name can work with int, float, string, etc., reducing the need for redundant functions.
+            Example:
+                max(5, 10) (integers)
+                max(3.14, 2.71) (floats)
+
+        3. Supports Multiple Input Formats
+            Useful when an algorithm can accept inputs in different forms (e.g., array + size vs. vector vs. range).
+            Example:
+                binary_search(arr, size, key)
+                binary_search(vec.begin(), vec.end(), key)
+
+        4. Default Parameters + Overloading for Flexibility
+            Can combine overloading with default arguments to reduce redundant functions.
+            Example:
+                print(arr) → prints entire array
+                print(arr, start, end) → prints a subrange
+
+        5. Polymorphic Helper Functions
+            In recursive algorithms, helper functions can be overloaded to simplify the API.
+            Example (QuickSort):
+                quicksort(arr) → public interface
+                quicksort(arr, low, high) → internal recursion
+
+And know more about : 
+
+Recursion 
+Implement DSA Concepts as Functions
+    Arrays: reverseArray, binarySearch
+    Strings: isPalindrome, countVowels
+    Sorting: mergeSort, quickSort
+    Trees/Graphs: DFS, BFS using recursive and iterative functions
+
+
+
+Vector in C++
+    replacement of array
+    ploblem -
+        array has fixed size 
+        int arr[5] = { 1, 2 , 3,4,5}
+        if i want to change the size then it is possible to go to change in our code 
+    
+    Vector is Dynamic array that change our size when required
+    syntax- 
+        vector<int> arr; 
+    
+    function in Vector -
+        push_back -> intialize a value on the last box of vector 
+
+        pop_back -> delete a back box value
+        
+        size ->how many box filled already
+        
+        capacity -> how many box in vector 
+        
+        at -> know exact position value
+
+    
+Passing Vectors to function : 
+    by value. Each time you pass , new vector is created if (&) is not passed to vector<int> v in function 
+
+    vector<int> &v 
+        this is point to same reference so the value is change in main function and not created new 

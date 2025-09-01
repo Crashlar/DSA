@@ -100,13 +100,16 @@ DSA(root)/
 |   |   ├── No parameters, return value
 |   |   ├── Questions
 |   |   └── Parameters and return value
-|   ├── Pointer/
+|   ├── Pointer and Function/
 |   |   ├── Wild Pointer
 |   |   ├── NULL Pointer
 |   |   ├── Void Pointers
 |   |   ├── Questions
 |   |   └── Dangling Pointer
 |   ├── Array/
+|   |   ├── 1Darray
+|   |   ├── multiDimensionalArray
+|   |   ├── Questions
 |   ├── String/
 |   ├── Time&Space-Complexity/
 |   ├── Sorting/
