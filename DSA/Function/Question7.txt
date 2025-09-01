@@ -1,0 +1,45 @@
+Yes — This is possible using Function Overloading.
+
+What is Function Overloading?
+    In C++, function overloading allows you to use the same function name for multiple functions, as long as their parameter list differs (in number, type, or order of parameters).
+
+    This is a feature of compile-time polymorphism.
+
+```code
+#include <iostream>
+using namespace std;
+
+void show(int x) {
+    cout << "Integer: " << x << endl;
+}
+
+void show(double y) {
+    cout << "Double: " << y << endl;
+}
+
+void show(int x, int y) {
+    cout << "Two Integers: " << x << ", " << y << endl;
+}
+
+int main() {
+    show(5);       // calls show(int)
+    show(3.14);    // calls show(double)
+    show(2, 4);    // calls show(int, int)
+    return 0;
+}
+
+```
+
+❌ When will it cause a conflict (error)?
+    If two functions have the same name and exact same parameter list, it will result in a redefinition error.
+
+    If the only difference is the return type, it will also cause a conflict.
+
+'''important'''
+
+    int func(int x);      // OK
+    float func(int x);    // ❌ Error: cannot overload only by return type
+
+''''important'''
+Question- 
+    Explore: Can the same function name be used for different functions without any conflict in C++?

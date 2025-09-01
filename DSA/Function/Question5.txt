@@ -1,0 +1,31 @@
+Soln- 
+    Minimum number of functions in any C++ program = 1 (just main())
+
+Why not the other options?
+    0 functions:
+        ❌ Invalid — a C++ program without a main() function cannot run.
+
+    2 functions:
+        ❌ Not minimum — you can have more, but not necessary.
+
+    Infinite functions:
+        ❌ Makes no sense logically — a program can have many, but there's no rule forcing infinity.
+
+```code
+#include <iostream>
+using namespace std;
+
+int main(){
+    return 0;
+}
+
+```
+
+
+// Question - 
+    // The minimum number of functions present in any C++ program is:
+
+    // 0
+    // 1
+    // 2
+    // Infinite

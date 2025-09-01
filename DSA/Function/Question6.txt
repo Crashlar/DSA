@@ -1,0 +1,36 @@
+A function may be called more than once from any other function
+    True
+
+        Why?
+            In C++, a function can be called multiple times from another function, including main() or any user-defined function. This is known as reusability, which is one of the main advantages of using functions.
+
+            ```code 
+            void greet() {
+                cout << "Hello!" << endl;
+            }
+
+            int main() {
+                greet(); // 1st call
+                greet(); // 2nd call
+                return 0;
+            }
+
+            ```
+It is necessary for a function to return some value"
+     False
+
+        Why?
+            In C++, it is NOT necessary for a function to return a value. If you don't want to return anything, you can use the void return type.
+
+            ``` code
+            void sayHi() {
+                cout << "Hi there!" << endl;
+            }
+            This function does not return anything — and that’s totally valid.
+            ```
+
+
+// State True and False:
+
+// A function may be called more than once from any other function
+// It is necessary for a function to return some value.
