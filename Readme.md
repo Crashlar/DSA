@@ -109,16 +109,46 @@ DSA(root)/
 |   ├── Array/
 |   |   ├── 1Darray
 |   |   ├── multiDimensionalArray
-|   |   ├── Questions
+|   |   └──  Questions
 |   ├── String/
+|   |   ├── specific-Topic
+|   |   └──  Questions
 |   ├── Time&Space-Complexity/
+|   |   ├── O(n*n)
+|   |   ├── O(n)
+|   |   ├── O(log*n)
+|   |   ├── O(n*log*n)
+|   |   ├── O(n*log*n)
+|   |   └──   Questions
 |   ├── Sorting/
-|   |   └──  Advanced/
+|   |   ├── Advanced/
+|   |   |   ├── Merge Sort
+|   |   |   ├── Quick Sort
+|   |   |   ├── Cyclic Sort
+|   |   |   └──  Questions
+|   |   ├── Bubble Sort
+|   |   ├── Insertion Sort
+|   |   ├── Selection Sort
+|   |   └──  Questions
 |   ├── Searching/
+|   |   ├── Linear Search
+|   |   ├── Binary Search
+|   |   └──  Questions
 |   ├── Recursion/
 |   ├── Special-Algorithm/
-|   ├── Special-Algorithm/
+|   |   ├── Prefix Sum
+|   |   ├── Sliding Window
+|   |   ├── Prime Number & Sieve Eratosthenes
+|   |   └──  Questions
 |   ├── OOP/
+|   |   ├── Class
+|   |   ├── Object
+|   |   ├── Constructor
+|   |   ├── Encapsulation
+|   |   ├── Polymorphism
+|   |   ├── Inheritance
+|   |   ├── Abstraction
+|   |   └──  Questions
 |   ├── Linked-list/
 |   ├── Stacks/
 |   ├── Queues/
@@ -133,6 +163,7 @@ DSA(root)/
 |   └──  SegmentTrees/
 ├── Readme.md                                   # Explains the Project
 ├── Interview.ipynb              
+├── Licence     
 ├── Videos                      
 └── Daily-Progression.txt                
 ```
