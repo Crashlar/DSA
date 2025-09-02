@@ -9,125 +9,424 @@
 ------------------------------------------------------------Now Start-----------------------------------------------------------------------------------------------------
 Friday 29/08/2025    Starttime - 7:54 Pm 
 
+Baiscs- 
+    Properties of getting Remainder
+    if a < b -> a % b = a
+    a % (-b)  = a % b 
+    (-a) % b = -(a % b )
+    (-a) % (-b) = (-a) % b
+
+    variables are starting is not allow with ! @ # % ^ & * ( ) - + .= / | \ ; : '  " and numbers and datatypes but start with underscore like _int is allow 
 
 
+
+
+
+    typecast 
+    '''
+        int x ;
+        float y ;
+
+        y= (float)x;
+        cout << y ;
+    
+    '''
+
+    hyrarcy level 
+        - left to right 
+
+
+            Operator	Name	Associativity
+            () [] -> .	Function call, Subscript, Member access	Left
+            ++ --	Increment/Decrement	Right
+            ! ~ - +	Logical/Bitwise NOT, Unary plus/minus	Right
+            * / %	Multiplication, Division, Modulus	Left
+            + -	Addition, Subtraction	Left
+            << >>	Bitwise shift	Left
+            < <= > >=	Relational operators	Left
+            == !=	Equality operators	Left
+            &	Bitwise AND	Left
+            ^	Bitwise XOR	Left
+            |	Bitwise OR	Left
+            &&	Logical AND	Left
+            ||	Logical OR	Left
+            ?:	Ternary conditional	Right
+            = += -= *= /= %= &= ^= |= <<= >>=	Assignment and compound assignment	Right
+            ,	Comma	Left
+
+
+
+    Taking Input in C++
+    ➤ Using cin for Basic Input
+    C++ leverages the standard input stream std::cin to receive data from the user.
+
+
+        int age;
+        std::cin >> age;
+    This reads an integer input and stores it in age.
+
+    ➤ Reading Multiple Values
+        int x, y;
+        std::cin >> x >> y;  // Accepts two integers separated by space or newline
+    ➤ Strings and Common Pitfall
+    While cin reads strings without spaces, to read full lines (like names or sentences), use getline():
+
+        std::string name;
+        std::getline(std::cin, name);
+    If getline() is used after cin, make sure to flush the newline character:
+
+        std::cin.ignore();  // Clears leftover newline from input buffer
+
+    2. Operator Precedence & Associativity
+    C++ has a rich set of operators. Understanding which operator is evaluated first is crucial when expressions contain multiple operators.
+
+    Operator Precedence Table (Top 10)
+    Precedence	Operator(s)	Associativity	Description
+            1 (Highest)	::	None	Scope resolution
+            2	++ -- () []	Left-to-right	Postfix
+            3	+ - ! ~ * &	Right-to-left	Unary
+            4	* / %	Left-to-right	Multiplication/Division
+            5	+ -	Left-to-right	Addition/Subtraction
+            6	<< >>	Left-to-right	Bitwise Shift
+            7	< <= > >=	Left-to-right	Relational
+            8	== !=	Left-to-right	Equality
+            9	&&	Left-to-right	Logical AND
+
+    Best Practice: Always use parentheses to ensure clarity and avoid relying solely on operator precedence.
+
+    Example:
+
+        int result = 10 + 5 * 2;  // Multiplication happens before addition => 10 + (5*2) = 20
+
+    3. Type Casting in C++
+
+    When different data types are mixed in expressions, type conversion plays a key role. C++ offers both implicit and explicit casting.
+
+    ➤ Implicit Type Conversion
+    Occurs automatically when operands differ in type.
+
+    int a = 5;
+    float b = 2.5;
+    float result = a + b;  // `a` is promoted to float
+
+    ➤ Explicit Type Casting (Manual)
+    C-style Cast:
+
+        float result = (float) a / b;
+
+    C++-style Cast (Preferred):
+
+        float result = static_cast<float>(a) / b;
+
+    C++ Cast Types
+    Cast Type	Purpose
+    static_cast	Normal conversions (int ↔ float, base ↔ derived)
+    dynamic_cast	Runtime-safe casting for polymorphic types
+    const_cast	Adds or removes const
+    reinterpret_cast	Bitwise reinterpretation (unsafe, low-level)
+
+    Avoid reinterpret_cast unless you're sure of what you're doing.
 
 
 ____________________________________________________________Day 2_______________________________________________________________________________________________
 Sunday 31/08/2025     Starttime - 4:10 Pm 
 
+Conditional - 
+    To find modulus or absolute values 
+        abs() , negative()
 
+    Conditional func
+        if
+        else
+        else if 
+
+    For multiple Condition in one use 
+        && 
+        ||
+        or
+        and
+
+    always use bracket don't depends on hierarcy  of order
+        (3 + 4 ) * 45 - (4 / 5)
+
+    better understanding in else-if go with showgrade.cpp
+
+Switch -> 
+    switch syntax
+        -    switch(expression){
+                case expression1: 
+                // code
+                break; 
+                case expression2:
+                code 
+                break;
+                case expression3:
+                // code
+                break;
+                as so on 
+            }
+
+
+    What 
+        switch statement is a flow control statement that is used to execute the different blocks of statements based on the value of the given expression. It is an alternative to the long if-else-if ladder which provides an easy way to execute different parts of code based on the value of the expression.
+
+
+    Working of switch case 
+        firstly match with case value then evaluate the case code if no any case matched then the default case automatic executed 
+
+    Rules of Switch statement
+        case value must be int or char datatype
+        You can have as many case blocks as needed.
+        duplicate case value are not allowed in any situation 
+        A break statement is optional in each case.
+
+____________________________________________________________Day 2 Extend_______________________________________________________________________________________________
+Pattern-Printing -> 
+    Tips-
+        break all in single single terms 
+        start printing with small terms 
+        end..
+
+        -Don't break the i , j structure if possible have you 
+
+    Summarize - 
+        1. Square/ rectangle ka structure (i -> 1 to n   j -> 1 to n )
+        2. Triangle 
+            1. i -> 1 to n 
+                j -> 1 to i 
+            2. i -> 1 to n 
+                j -> 1 to n + 1 - i 
+            3. i -> 1 to n 
+                j -> 1 to n - i 
+                k ->  1 to i   
+        3. Maths -> use brain power 
+
+    Common Pattern Categories : 
+        Category	                  Example	                    Key Logic
+        Rectangular	           ***** (5x5 square)	               Equal rows & columns
+        Right-Angled	            * → *****	                    Stars = Row No. (i)
+        Inverted	                 ***** → *	                    Stars = n - i
+        Pyramid	               Centered triangle	               Spaces + Stars
+        Diamond	               Pyramid + Inverted	               Split into 2 parts
+        Number-Based	          1 22 333                      	Print row number
+        Alphabet-Based	          A BB CCC	                         char('A' + i)
+
+
+    Step-by-Step Approach :
+        (1) Observe the Pattern
+            Count rows, columns, spaces, and symbols.
+            Check if it's growing/shrinking.
+
+        (2) Find Row-Column Formula
+            Relate i (row) and j (column) to the pattern.
+            Example:
+                Hollow Rectangle:
+                        Print * only at borders (i==0, i==n-1, j==0, j==m-1).
+
+        (3) Handle Spacing (if needed)
+            Use cout << " "; before stars for pyramids/diamonds.
+
+        (4) Test with Small n
+            Verify logic for n=3 or n=4 before scaling.
 ____________________________________________________________Day 3_______________________________________________________________________________________________
 Sunday 1/09/2025     Starttime - 10 Am  
 
+loops-
 
-function - 
-    y = f(x) = x^2 + 3 
-        f(x) -> output
-        x^2 + 3 -> input
+    What and Why -
+        sometimes there is a need to perform some operation more than once or (say) n number of times.
+        -(or)
+        koi bhi multiple times karni ho jo ek pattern se connected ho 
+        
+    loops
+        for ( initialization; test condition; updation) { 
 
-What is int main()-
-    - main function always works firstly then others func 
-    - this is only once  created 
+        // code
 
-Syntax- 
-    <void/int/float> function_name(int a  , int b , int c ){
-        function_body 
-    }
+        }
+            -steps of loop works 
+                // check 
+                // inside loop 
+                // increment / decrement
+                // repeat
 
-Builtin Function    
-    - min()
-    - max()
-    
+        Initialization: 
+            Initialize the loop variable to some initial value.
 
-Me :-
-Function Basic :-  
-    Definition & Declaration: 
-        A function is a building block of C++ programs that contains a set of statements which are executed when the functions is called. It can take some input data, performs the given task, and return some result. A function can be called from anywhere in the program and any number of times increasing the modularity and reusability.
-    
-        Syntax : 
-            return_type name() {
-            // Function body
-            }
-    Return types (void, int, etc.): 
-        Void functions do not have a return type, but they can do return values
-            1. A Void Function Can Return: We can simply write a return statement in a void fun(). In fact, it is considered a good practice (for readability of code) to write a return; statement to indicate the end of the function.
-            ``` code 
+        Test Condition:
+            This specifies the test condition. If the condition evaluates to true, then body of the loop is executed, and loop variable is updated according to update expression. If evaluated false, loop is terminated.
 
-            2. A void fun() can return another void function: A void function can also call another void function while it is terminating.
-            ``` code
-            // C++ code to demonstrate void()
-            // returning void()
-            #include <iostream>
-            using namespace std;
+        Update Expression: 
+            After executing the loop body, this expression increments/decrements the loop variable by some value.
 
-            // A sample void function
-            void work()
-            {
-                cout << "The void function has returned "
-                        " a void() !!! \n";
-            }
+        Note:
+            The loop variable can also be declared in the initialization section but the scope of the loop variables that are declared in the initialization section is limited to the for loop block.
 
-            // Driver void() returning void work()
-            void test()
-            {
-                // Returning void function
-                return work();
-            }
 
-            // Driver Code
-            int main()
-            {
-                // Calling void function
-                test();
-                return 0;
-            }
-            ```
+    While loop 
+        while (condition) {
+        // Body of the loop
+        update expression
+        }
 
-            3. A void() can return a void value: A void() cannot return a value that can be used. But it can return a value that is void without giving an error
-            ``` code 
-            // C++ code to demonstrate void()
-            // returning a void value
-            #include <iostream>
-            using namespace std;
+        The various parts of the While loop are:
 
-            // Driver void() returning a void value
-            void test()
-            {
-                cout << "Hello";
+        Condition: 
+            The loop executes its body till this condition remains true.
+        Update Expression:
+            Update the value of loop variable to make it closer to the termination condition.
+        Body:   
+            It is a group of statement that will be executed till the condition remains true.
+        
 
-                // Returning a void value
-                return (void)"Doesn't Print";
-            }
+    do-while 
+        do {
+            // Body of the loop
+            // Update expression
+        } while (condition);
+        
+        When the program control first comes to the do…while loop, the body of the loop is executed first and then the test condition/expression is checked, unlike other loops where the test condition is checked first. Due to this property, the do…while loop is also called exit controlled or post-tested loop.
 
-            // Driver Code
-            int main()
-            {
-                test();
-                return 0;
-            }
-            ``` end
+        When the test condition is evaluated as true, the program control goes to the start of the loop and the body is executed once more.
+        
+        The above process repeats till the test condition is true.
+        
+        When the test condition is evaluated as false, the program controls move on to the next statements after the do…while loop.
 
-    Function calling : 
-        - Function Calling involves specifying the function's name followed by parentheses(). If the function requires input values, known as parameters, then they are passed inside the parentheses as arguments. When the function is called, the program execution jumps to the function's code block, executes it, and then returns control to the point in the program where the function was called.
-        // calling the function
-        function_name(argument_1, argument_2, argument_3, ...)
 
-Function Parameters :
-    Pass by value -  
-        When you pass a parameter by value, the function receives a copy of the original value. The function works with this copy, and any changes made to the parameter inside the function do not affect the original value outside the function.
+    break
+        Syntax 
+            break;
+        stop when the condtion true 
+        A break statement is used when we want to terminate the running loop whenever any particular condition occurs. Whenever a break statement occurs loop breaks and stops executing.
+        The Break statement is used to exit from the loop constructs.
+        The break statement is usually used with the switch statement, and it can also use it within the while loop, do-while loop, or the for-loop.
+        When a break statement is encountered then the control is exited from the loop construct immediately.
+        Break statements uses switch and label statements.
+        Leftover iterations are not executed after the break statement.
 
-        Key Points:
-            - The original data remains unchanged because the function operates on a copy.
-            - This is safe because the original value is protected from modification.
-            - It can be less efficient for large data (like big objects or structures) because copying takes time and memory.
-    Pass by reference (int &x) : 
-        When you pass by reference, the function receives the actual original variable, not a copy. Any changes made to the parameter inside the function will affect the original value outside the function.
 
-        Key Points : 
-            - The original data can be modified by the function.
-            - This is efficient because no copy is made, even for large data.
-            - Useful when you want the function to modify the original variable or avoid the overhead of copying.
+    Continue 
+        Syntax
+            continue;
+        is used when we have to skip a particular iteration. Whenever we write continue statement the whole code after that statement is skipped and loop will go for next iteration.
+        The continue statement is not used to exit from the loop constructs.
+        The continue statement is not used with the switch statement, but it can be used within the while loop, do-while loop, or for-loop.
+        When the continue statement is encountered then the control automatically passed to the beginning of the loop statement.
+        label statements.	It does not use switch and label statements.
+        Leftover iterations can be executed even if the continue keyword appears in a loop.
+
+
+Function- 
+    function - 
+        y = f(x) = x^2 + 3 
+            f(x) -> output
+            x^2 + 3 -> input
+
+    What is int main()-
+        - main function always works firstly then others func 
+        - this is only once  created 
+
+    Syntax- 
+        <void/int/float> function_name(int a  , int b , int c ){
+            function_body 
+        }
+
+    Builtin Function    
+        - min()
+        - max()
+        
+
+    Me :-
+    Function Basic :-  
+        Definition & Declaration: 
+            A function is a building block of C++ programs that contains a set of statements which are executed when the functions is called. It can take some input data, performs the given task, and return some result. A function can be called from anywhere in the program and any number of times increasing the modularity and reusability.
+        
+            Syntax : 
+                return_type name() {
+                // Function body
+                }
+        Return types (void, int, etc.): 
+            Void functions do not have a return type, but they can do return values
+                1. A Void Function Can Return: We can simply write a return statement in a void fun(). In fact, it is considered a good practice (for readability of code) to write a return; statement to indicate the end of the function.
+                ``` code 
+
+                2. A void fun() can return another void function: A void function can also call another void function while it is terminating.
+                ``` code
+                // C++ code to demonstrate void()
+                // returning void()
+                #include <iostream>
+                using namespace std;
+
+                // A sample void function
+                void work()
+                {
+                    cout << "The void function has returned "
+                            " a void() !!! \n";
+                }
+
+                // Driver void() returning void work()
+                void test()
+                {
+                    // Returning void function
+                    return work();
+                }
+
+                // Driver Code
+                int main()
+                {
+                    // Calling void function
+                    test();
+                    return 0;
+                }
+                ```
+
+                3. A void() can return a void value: A void() cannot return a value that can be used. But it can return a value that is void without giving an error
+                ``` code 
+                // C++ code to demonstrate void()
+                // returning a void value
+                #include <iostream>
+                using namespace std;
+
+                // Driver void() returning a void value
+                void test()
+                {
+                    cout << "Hello";
+
+                    // Returning a void value
+                    return (void)"Doesn't Print";
+                }
+
+                // Driver Code
+                int main()
+                {
+                    test();
+                    return 0;
+                }
+                ``` end
+
+        Function calling : 
+            - Function Calling involves specifying the function's name followed by parentheses(). If the function requires input values, known as parameters, then they are passed inside the parentheses as arguments. When the function is called, the program execution jumps to the function's code block, executes it, and then returns control to the point in the program where the function was called.
+            // calling the function
+            function_name(argument_1, argument_2, argument_3, ...)
+
+    Function Parameters :
+        Pass by value -  
+            When you pass a parameter by value, the function receives a copy of the original value. The function works with this copy, and any changes made to the parameter inside the function do not affect the original value outside the function.
+
+            Key Points:
+                - The original data remains unchanged because the function operates on a copy.
+                - This is safe because the original value is protected from modification.
+                - It can be less efficient for large data (like big objects or structures) because copying takes time and memory.
+        Pass by reference (int &x) : 
+            When you pass by reference, the function receives the actual original variable, not a copy. Any changes made to the parameter inside the function will affect the original value outside the function.
+
+            Key Points : 
+                - The original data can be modified by the function.
+                - This is efficient because no copy is made, even for large data.
+                - Useful when you want the function to modify the original variable or avoid the overhead of copying.
+
+Pointer-> 
     Pass by pointer (int* x) : 
         When you pass by pointer, the function receives the memory address (pointer) of the original variable. The function can use this address to access or modify the original value.
         Key Points:
@@ -135,6 +434,124 @@ Function Parameters :
             - Requires explicit dereferencing to access or modify the value (unlike references, which work like the  original variable).
             - Pointers can be reassigned to point to other data, while references cannot be reassigned after initialization.
             - Can be used to pass "null" (no data), which is not possible with references.
+
+
+    all output value are same 
+
+    Double Pointer - 
+        used to store address of a single pointer 
+
+
+    Pointer- 
+        A pointer is a variable that stores the address of another variable. 
+        Create Pointer - 
+            data_type* variable_name 
+            <!--  A pointer can be declared in the same way as any other variable but with an asterisk symbol (*) -->
+
+    Address-of Operator (&) : 
+        The & operator is used to obtain the memory address of a variable.
+        It creates a pointer that "points to" the variable's memory location.
+
+    Dereference Operator (*) : 
+        The * operator is used to access the value stored at the memory address a pointer is pointing to.
+        It allows you to manipulate the value indirectly through the pointer.
+        
+    Null Pointer - 
+        A NULL pointer is a pointer that does not point to any valid memory location but NULL. It is often used to initialize a pointer when you do not want it to point to any object.
+    //    good practice of using pointers
+            int* ptr1 = 0;
+            int* ptr1 = '\0';
+            int* ptr1 = NULL;
+
+    ## Example of the Pointer assignment
+    ``` bash 
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main() {
+        int a = 10;
+        int b = 99;
+
+        int *ptr = &a;
+        cout << *ptr << endl;
+        
+        // Changing the address stored
+        ptr = &b;
+        cout << *ptr;
+        
+        return 0;
+    }
+    ```
+    [!image](https://media.geeksforgeeks.org/wp-content/uploads/pointers-in-c.png)
+
+
+    Size of Pointer-
+        8 bytes for a 64-bit System
+        4 bytes for a 32-bit System
+
+
+    Advantage of Using Pointer 
+        - Pointers are most efficient in handling arrays and other data structures.
+        - Pointers can return multiple values from a function through function arguments.
+        - Pointers can be used to reference a function and hence it enables passing of a function as an argument to another function.
+        - Pointers save a lot of space in storage memory by offering the use of pointer arrays to character strings.
+        - Pointers support dynamic memory allocation in Data Structure.
+        - Pointers enables a user to manipulate dynamic data structures such as linked lists, queues, stacks, and trees
+
+
+    Chain of Pointers: 
+        - chain of pointer is created when we make a pointer to point to another pointer and it may continue further 
+        [!image](https://codedec.com/wp-content/uploads/2020/10/3-1.png)
+
+    Passing address to Functions :
+        - We can pass the address of a variable as an argument to a function.
+        call by reference : 
+            The process of passing the addresses of variable to a function using pointer is called as call by reference
+        class by Value :
+            The process of passing the actual values of variables to a function is known as Call by Value
+            Example: Program to swap values of two variables using pointer operation: 
+                
+                ``` code 
+                #include <iostream>
+                using namespace std;  
+                void swap (int *x, int *y)  
+                {  
+                int temp;   
+                temp = *x;  
+                *x=*y;  
+                *y=temp;
+                }
+                // main function 
+                int main()  
+                {  
+                int x = 2;  
+                int y = 4;   
+                cout << ("x is %d and y is %d before swapping\n",x,y)<< endl;
+                swap(&x,&y);
+                        
+                cout << ("x is %d and y is %d after swapping\n",x,y);
+                return 0;
+                }  
+                ```
+    Returning Pointers from Functions: 
+    ``` code
+        #include<stdio.h>
+        int *Large(int *, int *);
+        int main()
+        {
+        int a=5,b=10,*p;
+        p = Large(&a,&b);
+        
+        printf("Larger number between %d and %d is %d.",a,b,*p);
+        }
+        int *Large(int *x, int *y)
+        {
+        if(*x>*y)
+        return (x);
+        else
+        return (y);  
+        }
+    ```
 
 Function Overloading : 
     Function overloading improves clarity and reusability in DSA by letting one function name handle multiple variants. It’s widely used in sorting, searching, graph algorithms, and math operations to keep code clean and intuitive.
@@ -169,42 +586,112 @@ Function Overloading :
                 quicksort(arr) → public interface
                 quicksort(arr, low, high) → internal recursion
 
-And know more about : 
-
-Recursion 
-Implement DSA Concepts as Functions
-    Arrays: reverseArray, binarySearch
-    Strings: isPalindrome, countVowels
-    Sorting: mergeSort, quickSort
-    Trees/Graphs: DFS, BFS using recursive and iterative functions
 
 
+Array-> 
+    What is an Array - 
+        array is a DatStructure -> storage to store data 
 
-Vector in C++
-    replacement of array
-    ploblem -
-        array has fixed size 
-        int arr[5] = { 1, 2 , 3,4,5}
-        if i want to change the size then it is possible to go to change in our code 
-    
-    Vector is Dynamic array that change our size when required
-    syntax- 
-        vector<int> arr; 
-    
-    function in Vector -
-        push_back -> intialize a value on the last box of vector 
+    Syntax and Declaration -
+        datatype var_name[item_n] = {itm1 , itm2 , itm3 , ..... , itm_n};
 
-        pop_back -> delete a back box value
+    Memory allocation in Array -
+        Continuous Memory allocation
+        int arr[4] = {1 , 3, 4, 5};
+
+Vector-> 
+    Vector in C++
+        replacement of array
+        ploblem -
+            array has fixed size 
+            int arr[5] = { 1, 2 , 3,4,5}
+            if i want to change the size then it is possible to go to change in our code 
         
-        size ->how many box filled already
+        Vector is Dynamic array that change our size when required
+        syntax- 
+            vector<int> arr; 
         
-        capacity -> how many box in vector 
+        function in Vector -
+            push_back -> intialize a value on the last box of vector 
+
+            pop_back -> delete a back box value
+            
+            size ->how many box filled already
+            
+            capacity -> how many box in vector 
+            
+            at -> know exact position value
+
         
-        at -> know exact position value
+    Passing Vectors to function : 
+        by value. Each time you pass , new vector is created if (&) is not passed to vector<int> v in function 
 
-    
-Passing Vectors to function : 
-    by value. Each time you pass , new vector is created if (&) is not passed to vector<int> v in function 
+        vector<int> &v 
+            this is point to same reference so the value is change in main function and not created new 
+____________________________________________________________Day 4_______________________________________________________________________________________________
+Sunday 02/09/2025     Starttime - 10 Am  
 
-    vector<int> &v 
-        this is point to same reference so the value is change in main function and not created new 
+
+2D Vectors-> 
+
+        vector<vector<int> > v;
+        vector<vector<int> > v(m);  
+            m is size
+        vector<vector<int> > v(m , vector<int> (n));
+            m is rows
+            n is cols
+        vector<vector<int> > v(m , vector<int> (n , k ));
+            m is rows
+            n is cols
+            k is value in each box 
+
+    Advantages of vectors over arrays
+        1. Increase your rows
+        2. Variable Columns
+
+        only possible in vector in box intialization
+            |   |
+            |   |   |
+            |   |   |   |
+            |   |   |
+
+    Vector-
+        2D Vector are vector of vector
+
+    Advantages of Vector- 
+        Passing of 2D arrays into Functions -> Problem 
+            Soln = We have to mention rows and cols every time
+
+
+    Basic STL Functions in Vector
+        push_back()
+        pop_back()
+        begin()
+        end()
+        rbegin()
+        rend()
+
+String -> 
+    What are strings and Why are they used 
+        - 
+    Declaration of strings and Taking input 
+        - string str = "Name";
+        cout << str;
+
+
+    Built-in string
+        - size() / length() 
+        - push_back()   
+            only single character allow
+        - pop_back()
+            last character is deleted 
+        - (+) operator
+            append the character only not number 
+        - revese
+            // in #include<algorithm>
+        - substr()
+
+        - to_string()
+            Its convert integer to string
+        - etc
+        
