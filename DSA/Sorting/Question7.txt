@@ -1,0 +1,10 @@
+Which of the following examples represent the worst case input for an insertion sort?
+
+array in sorted order
+large array
+normal unsorted array
+array sorted in reverse order
+
+Ans - 
+    array sorted in reverse order
+        this will take more time that why are swapping one by one 

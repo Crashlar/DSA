@@ -1,0 +1,8 @@
+Question 
+    Sort a String in descending order of values associated after removal of values smaller than X,
+
+    Lets - 
+        sting s = "AZYZXBDJKX";
+        str = "ZYZXX";
+
+        sort : ZZYXX

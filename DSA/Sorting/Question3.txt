@@ -1,0 +1,13 @@
+QUESTION - 
+    In which case does bubble sort works in the most efficient way:
+
+    When the array is sorted in increasing order
+    When the array is sorted partially
+    When the array is sorted in decreasing order.
+    When the array is nearly sorted.
+
+Ans - 
+    Array is already sorted in increasing order 
+    In this case, no swaps are needed, and bubble sort will complete in just one pass.
+    It optimizes by detecting no swaps and stops early.
+    Best-case time complexity: 𝑂(𝑛) (just one pass through the array).

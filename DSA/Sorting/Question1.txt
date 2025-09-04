@@ -1,0 +1,26 @@
+QUESTION- 
+     Which of the following(s) is/are true about bubble sort:
+
+Option 1 - It is stable sort
+    True 
+    Adjacent Swaps:
+        Bubble sort works by repeatedly swapping adjacent elements if they are out of order. Since the swaps only occur between neighboring elements, equal elements never jump over each other.
+
+    Preserving Original Order:
+         If two elements with equal values are already in a certain order, bubble sort does not disrupt their order—it only swaps when an element is strictly greater than another.
+
+Option 2 - It has a worst case space complexity of O(n)
+    False
+    bubble sort typically has a worst-case space complexity of O(1)
+    Worst case Time complexity - O(n^2)
+Option 3 - It involves swapping of adjacent elements
+    True 
+    Bubble sort works by repeatedly swapping adjacent elements that are out of order, gradually moving larger elements towards the end of the array.
+Option 4 - After each iteration, the greatest element is placed at the end of the array.
+    True
+    This happens because adjacent swaps ensure that larger values "bubble up" toward the top.
+        Original:  [5, 3, 8, 4]
+        Pass 1:    [3, 5, 4, 8]  (8 reaches the last position)
+        Pass 2:    [3, 4, 5, 8]  (5 reaches the second-last position)
+        Sorted:    [3, 4, 5, 8]  (fully sorted!)
+

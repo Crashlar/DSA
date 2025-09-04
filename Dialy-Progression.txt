@@ -181,6 +181,9 @@ Switch ->
         A break statement is optional in each case.
 
 ____________________________________________________________Day 2 Extend_______________________________________________________________________________________________
+Sunday 31/08/2025    Starttime - 10 Pm
+
+
 Pattern-Printing -> 
     Tips-
         break all in single single terms 
@@ -229,7 +232,7 @@ Pattern-Printing ->
         (4) Test with Small n
             Verify logic for n=3 or n=4 before scaling.
 ____________________________________________________________Day 3_______________________________________________________________________________________________
-Sunday 1/09/2025     Starttime - 10 Am  
+Monday 1/09/2025     Starttime - 10 Am  eg along the day 2
 
 loops-
 
@@ -629,7 +632,7 @@ Vector->
         vector<int> &v 
             this is point to same reference so the value is change in main function and not created new 
 ____________________________________________________________Day 4_______________________________________________________________________________________________
-Sunday 02/09/2025     Starttime - 10 Am  
+Tuesday 02/09/2025     Starttime - 10 Am  
 
 
 2D Vectors-> 
@@ -694,4 +697,139 @@ String ->
         - to_string()
             Its convert integer to string
         - etc
+
+
+____________________________________________________________Day 5_______________________________________________________________________________________________
+Thrusday 04/09/2025     Starttime - 10 Am 
+
+Time-Space-Complexity ->
+    Notation for Differnt types of Time Complexity 
+
+        Big O Notation 
+            O(n)
+                O(n+ k ) is = O(n)
+                always takes the highest power 
+            O(n^2)
+            O(logn)
+            O(2^n)
+            O(1)
+            Where n is usually size of array / data structure 
+
+    Space Complexity
+        - Study of all extra space used in terms of given 'm' , 'n'
+        O(1)
+            constants 
+        O(n+m)
+        O(n*m)
         
+Sorting -> 
+
+    What is Sorting ? 
+    arr[4] = {5 , 3, 2 , 6};
+        to sort = Put in ascending order 
+            sort(v.begin() , v.end())
+            reverse(v.begin() , v.end())
+        sort in descending order = put the element in descending order 
+
+    Bubble sort Algorithm
+        arr[] = { 5 , 1 , 4 , 3 , 2};
+
+        check both adjacent element and if first one is greater than swap both and move on linearly 
+        
+        arr[] = 5 , 1 , 4 , 3 , 2 
+            last element on best position to don't move 
+            1st pass = 1 , 4, 3, 2 , 5 
+            2nd Pass = 1 , 3 , 2 , 4 , 5 
+            3rd Pass = 1 , 2 , 3 , 4 , 5 
+
+        Worst case :- 
+            arr[] = 5 , 4 , 3 , 2 , 1 
+                1st pass = 4 , 3 , 2 , 1 , 5  
+                2nd Pass = 3 , 2 , 1 , 4 , 5
+                3rd Pass = 2 , 1 , 3 , 4 , 5
+                4th Pass = 1 , 2 , 3 , 4 , 5
+        
+        Observation 
+            In each pass the nth max element goes to its right position 
+            if there are n elements , then we require atmost(jyada se jyada) 'n-1' passes to sort 
+        Algorithm-
+            In each pas swap two adjacent elements if arr[i] > arr[i+1]
+            Iteration in each pass also reduces 
+
+
+        Can We optimize it further
+            Ques - Given an array , find if it is sorted or not 
+            Ans-
+                arr[] = {1 , 2, 3,4}
+                bool flag = true
+                for( int i = 0 ; i < n -1 ; i++){
+                    if ( arr[i] > arr[i+1]){
+                        flag = false;
+                        break;
+                    }
+                }
+                if( flag) -> sorted 
+
+    Stable and Unstable Sort 
+        arr[] = {5 , 3, 5, 1, 2}
+
+        After sort =
+            stable sort - 1 , 2, 3 , 5 of 1 , 5 of 2
+            Unstable sort -1 , 2, 3 , 5 of 2 , 5 of 1
+        Conclusion - Bubble sort is a stable sort
+
+
+    -Selection sort Algorithm
+        arr[] = {5 , 3 , 1 , 4 , 2 }
+        1 , 3, 5 , 4 , 2 
+        1 , 2, 5 , 4 ,3 
+        1 , 2, 3, 4, 5
+        sorted  = 1 , 2, 3, 4, 5
+        steps-
+            array me min ko swap kar do 
+            n-1 total swaps
+            
+    -Time complexity and Space complexity
+        time complexity - O(n^2)
+        Space complexity - O(1)
+    -Stability
+        stable and unstable - use wiki 
+        
+        -usecases  
+            cost of swapping starting se 'k' minimun element out of n , if size of arrary is small 
+    -Insertion sort Algorithm
+        arr[] = 5 , 3 , 1 , 4 , 2
+                5 | 3 , 1 , 4 , 2 
+                3 , 5 | 1 , 4 , 2
+                1 , 3 , 5 | 4 , 2 
+                1 , 3 , 4 , 5 | 2 
+                1 , 2 , 3 , 4 , 5 | 
+            start from second element first is already sorted if 3 is smaller than 5 than swap  
+            if 1 is smaller than 5 then swap then if 1 is smaller than 3 so swap each 
+            remaining element sorted accordinaly 
+                5 , 3 , 1 , 4 , 2 
+                3 , 5 , 1 , 4 , 2 
+                3 , 1 , 5 , 4 , 2 
+                1 , 3 , 5 , 4 , 2
+                1 , 3 , 4 , 5 , 2  
+                1 , 3 , 4 , 2 , 5
+                1 , 3 , 2 , 4 , 5 
+                1 , 2 , 3 , 4 , 5  
+            -code
+                for( int i = 0 ; i <= n -1 ; i++){
+                    int j = i ; 
+                    while ( j >= 0){
+                        if ( arr[j] >= arr[j-1]) break;
+                        if(arr[j] < arr[j-1]){
+                            swap(arr[j], arr[j-1]);
+                            j--;
+                        }
+                    }
+                }
+
+    Time complexity and Space complexity
+        Time complexity - O(n^2)
+        space complexity - O(1)
+    Stability of both
+        only adjacent swap just like bubble sort 
+

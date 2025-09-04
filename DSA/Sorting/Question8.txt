@@ -1,0 +1,8 @@
+How many passes would be required during insertion sort to sort an array of 5 elements?
+
+1
+Depends on order of elements
+4
+5
+
+Ans - n-1 so 4 is correct 

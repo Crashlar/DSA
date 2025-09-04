@@ -1,0 +1,5 @@
+Question 
+    How many maximum swaps are needed to sort of length 6 ?
+        Takng the worst case 
+    total no of swap = total no. of operation 
+        = (n*(n-1))/2 = (6 * 5) /2 = 15 
