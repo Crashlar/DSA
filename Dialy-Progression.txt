@@ -556,6 +556,7 @@ Pointer->
         }
     ```
 
+---Function Overloading---  
 Function Overloading : 
     Function overloading improves clarity and reusability in DSA by letting one function name handle multiple variants. It’s widely used in sorting, searching, graph algorithms, and math operations to keep code clean and intuitive.
     Why Use Function Overloading in DSA? : 
@@ -590,7 +591,7 @@ Function Overloading :
                 quicksort(arr, low, high) → internal recursion
 
 
-
+---Array---  
 Array-> 
     What is an Array - 
         array is a DatStructure -> storage to store data 
@@ -602,6 +603,7 @@ Array->
         Continuous Memory allocation
         int arr[4] = {1 , 3, 4, 5};
 
+---Vector---  
 Vector-> 
     Vector in C++
         replacement of array
@@ -634,7 +636,7 @@ Vector->
 ____________________________________________________________Day 4_______________________________________________________________________________________________
 Tuesday 02/09/2025     Starttime - 10 Am  
 
-
+---Vector---  
 2D Vectors-> 
 
         vector<vector<int> > v;
@@ -673,7 +675,7 @@ Tuesday 02/09/2025     Starttime - 10 Am
         end()
         rbegin()
         rend()
-
+---String---  
 String -> 
     What are strings and Why are they used 
         - 
@@ -702,6 +704,7 @@ String ->
 ____________________________________________________________Day 5_______________________________________________________________________________________________
 Thrusday 04/09/2025     Starttime - 10 Am 
 
+---Time-Space-Complexity---
 Time-Space-Complexity ->
     Notation for Differnt types of Time Complexity 
 
@@ -721,7 +724,8 @@ Time-Space-Complexity ->
             constants 
         O(n+m)
         O(n*m)
-        
+
+---Sorting---    
 Sorting -> 
 
     What is Sorting ? 
@@ -832,4 +836,243 @@ Sorting ->
         space complexity - O(1)
     Stability of both
         only adjacent swap just like bubble sort 
+
+
+
+____________________________________________________________Day 6_______________________________________________________________________________________________
+Thrusday 04/09/2025     Starttime - 11 Pm 
+
+---Binary & linear Search---
+Binary  & Linear Search -> 
+    What and Why 
+        arr[] = { 1 , 2, 4 , 5 , 9, 15 , 18 , 21};
+        target = 18 
+
+        // approach 1  linear Search 
+            // code
+            bool flag = false ; // target not present 
+            for ( int i = 0 ; i < n ; i++){
+                if(arr[i] == target ){
+                    flag = true;
+                    break;
+                }
+                // Time complexity O(n) 
+            }
+
+            if ( flag ) cout << "PResent";
+            else cout << "Absent"; 
+            
+        // Approach 2  binary search
+            Works only if array is sorted (noth ascending or descending)
+            Works on indeces
+            firstly maintain low_index , high_index
+            int mid = (low_index + high_index)/2
+
+            // thinking process
+            arr[] = { 1 , 2, 4 , 5 , 9, 15 , 18 , 21};
+            int mid  =( lo + hi )/  2
+            if ( arr[mid] == target ) return true ; 
+            if ( arr[mid] < target ) lo = mid + 1 ; 
+            if ( arr[mid] > target ) hi = mid - 1 ;   
+            
+---Recursion---
+Recursion->
+    What?
+        replacement of loops
+        function calling itself 
+
+    What are Function Call
+    // base 
+    // kaam 
+    // call 
+    // kaam 
+    // return 
+
+-----OOP----
+OOP
+    object oriented Programming is a methodology or paradigm to design a program using classes and objects 
+
+    Data Abstraction 
+         - creating a layer and hide meaningful code 
+         - security 
+    Data Encapsulation 
+         - creating private to secure access from outsider 
+    Inheritance
+         - inherit class from parents
+    Polymorphism
+         - overloading
+         - overriding 
+
+    What are classes? 
+        class is a User-defined datatype.
+        class is a blueprint (blueprint means how this shown )
+
+    What is object ? 
+        object is an instance of the class (instance means a shadow)
+
+    Array Approach vs class
+        choosing between an array-based approach and a class-based approach depends on the complexity and purpose of your code. Arrays are simple, lightweight, and efficient for handling fixed-size data with minimal overhead. They’re ideal for quick tasks like storing scores or iterating over values when you don’t need much logic attached. However, arrays lack encapsulation and safety features—there’s no built-in bounds checking, and you have to manually implement operations like sorting or searching. On the other hand, classes offer a structured and scalable way to manage data and behavior together. By wrapping arrays inside classes, you gain the ability to add validation, abstraction, and reusable methods, making your code more maintainable and beginner-friendly. This is especially useful when building modular tools, GUI/CLI interfaces, or open-source projects where clarity and contributor experience matter. While arrays serve well for raw performance and simplicity, classes empower you to design systems that grow with your needs, support collaboration, and align with best practices in modern C++ development.
+
+    Getter 
+        accessors (as they access the value), are the public member functions that are used to fetch private member's values. In general, the getter starts with the word “get” followed by the variable name.
+    Setter
+        known as mutators (as they update the value), are also the public member functions that set the value of a private member variable. In general, the setter starts with the word “set” followed by the variable name.
+        
+    Static Vs Dynamic Allocation 
+        memory allocation can be broadly categorized into static and dynamic allocation, each serving different purposes depending on the program’s needs. Static allocation occurs at compile time, meaning the memory for variables is reserved before the program runs. These variables typically reside in the stack and are automatically managed by the compiler. This approach is faster and safer, as it avoids manual memory management, but it lacks flexibility—especially when the size of data structures isn’t known in advance. On the other hand, dynamic allocation happens at runtime, allowing developers to request memory from the heap using operators like new and delete. This method is ideal for scenarios where the size or lifetime of data structures is unpredictable, such as when building linked lists, trees, or buffers based on user input. However, dynamic allocation requires careful handling to avoid memory leaks and dangling pointers. While static allocation is best suited for fixed-size arrays and simple variables, dynamic allocation shines in more complex, scalable applications. Choosing between the two depends on the trade-off between performance, flexibility, and control over memory management.
+
+    class in class 
+        A nested class is defined within the scope of another class. It behaves like any other member of the outer class, but with some important access rules:
+        The nested class does not automatically have access to the private members of the outer class.
+        The outer class can access the nested class if it's declared public.
+
+    Array of objects
+        an array of objects refers to a collection of instances of a class stored in contiguous memory locations. This allows you to manage multiple objects with similar properties and behaviors efficiently. Each element in the array is an object, and you can access its members using the array index and dot operator.
+
+    Constructor
+        constructor banana is best for the class to pass the value and and auto connected to system 
+        is very very similar to function
+        mandatory for class 
+        Hidden function 
+        object Creation 
+        1. Default Constructor -.always exist in form of hidden in class
+        2. Parameterized Constructor -.
+        3. Copy Constructor -.
+    
+    Destructor
+        Destruction 
+        Constructor object create 
+        Constructor object destroy
+        -. is maintain to freeup the  memory 
+
+    Shallow and deep Copy
+        Shallow copy is like copying a house key—you and the other person now access the same house.
+        Deep copy is like building a second house with the same design—each person has their own space.
+      
+    Static members
+        The static keyword is used with a variable to make the mmory of  the variable static once a static variable is declared its memory can't be changed 
+        'ClassName::Startfunc'
+        :: outsider the functions(scope)
+        ClassName::  calling the class value(scope)
+
+    Intialization list 
+            short way to declare the constructor 
+            ClassName(int i, string n) : attribute1Name(i), attribute2Name(n) {
+                // Constructor body (optional logic)
+            }
+
+    Function overloading(compile time )
+        creating functions with same name but different parameters
+        parameter is not same as count(parameter)
+        allowed is only name same but different parameter 
+
+        1. compile time Polymorphism
+            - function overloading
+            - operator overloading
+            also known as static polymorphism or early binding—refers to the ability of the compiler to determine which function or operator to invoke at compile time, based on the context. This makes your code more efficient and flexible, especially when you're designing reusable components or modular tools.
+        2. runtime Polymorphism
+            - function overriding
+            also known as dynamic polymorphism or late binding—occurs when the decision about which function to invoke is made during program execution, not at compile time. This is a cornerstone of object-oriented programming and enables flexible, extensible designs.
+
+    Inheritance
+        Access the public and protected members of the base class.
+        Override or extend functionality.
+        Avoid rewriting common logic.
+
+        # The Hierachicy of the access specifier or class Inheritance
+            |----------|---------------------------------------------|
+            |Mode	   | Effect on Base Members in Derived Class     |
+            |----------|---------------------------------------------|
+            |public    |	Public → Public, Protected → Protected   |
+            |----------|---------------------------------------------|
+            |protected |	Public → Protected, Protected → Protected|
+            |----------|---------------------------------------------|
+            |private   | Public & Protected → Private                |
+            |----------|---------------------------------------------|
+        
+        1.Single Inheritance
+        Single inheritance in C++ is the simplest form of inheritance, where one class (called the derived class) inherits from exactly one other class (called the base class). This creates a one-to-one relationship, allowing the derived class to reuse and extend the functionality of the base class.
+
+            In single inheritance:
+                The derived class inherits public and protected members of the base class (depending on access specifier).
+                Private members of the base class are not directly accessible in the derived class.
+                It promotes code reuse, modularity, and specialization.
+        
+        2. multiple Inheritance
+            Multiple inheritance in C++ allows a class to inherit from more than one base class, combining their properties and behaviors into a single derived class. This is a powerful feature, but it comes with complexity—especially when base classes share common members
+            
+            In multiple inheritance:
+                A derived class can inherit from two or more base classes.
+                It gains access to all accessible members of each base.
+                Constructors of base classes are called in the order they appear in the inheritance list.
+
+        3. multi-level Inheritance
+            Multilevel inheritance in C++ is a type of inheritance where a class is derived from another derived class, forming a chain of inheritance across multiple levels. It’s like a family tree: a grandparent class, a parent class, and a child class, each building on the previous one.
+
+            In multilevel inheritance:
+                This allows the most derived class to reuse and extend features from multiple layers of abstraction.
+        
+        4. Hierachical Inheritance
+            Hierarchical inheritance in C++ occurs when multiple derived classes inherit from a single base class. It’s like a tree branching out from one trunk—each subclass gets access to the common features of the base class, but can also define its own unique behavior.
+            
+            In hierarchical inheritance:
+                One base class serves as the parent.
+                Two or more derived classes inherit from it independently.
+                Each derived class can use the base class’s members and add its own
+        
+        5. Hybrid Inheritance    
+            Hybrid inheritance in C++ is a combination of two or more types of inheritance—such as single, multiple, multilevel, and hierarchical—within a single class hierarchy. It’s like mixing different architectural styles to build a flexible, reusable, and scalable structure. This form of inheritance allows developers to model complex relationships between classes while maximizing code reuse.
+
+            In hybrid inheritance:
+                A class may inherit from multiple classes (multiple inheritance).
+                Those base classes may themselves be part of a multilevel or hierarchical inheritance chain.
+                The result is a multipath inheritance structure, which can introduce ambiguity if not carefully designed.
+
+    Diamond Problem 
+        When 2  instance of base classes are present in the derived class
+        B derives A , C derives A and D derives B + C.
+        Now D has 2 instance of A 
+
+        we use virtual inheritance so that B and C share a single instance of A, and D inherits that shared instance
+    
+    Function overriding(Runtime)
+        When a function of base class is redefined in it's derived class, it's called function overridding 
+        Accessing through scope resolution operator
+        Accessing through pointer.
+
+        means-. sons forcefully takes properties from parents
+
+    Virtual Function
+        Virtual functions makes sore the correct function is called for an object, regardless of the pointer used for calling it. 
+
+    Abstract Class
+        have pure virtual function 
+        declare in the base class 
+
+    Friend Function 
+        A friend function in C++ is a powerful feature that allows a non-member function to access the private and protected members of a class. It’s like giving a trusted outsider a backstage pass to your class’s internal data—without making them a full member.
+
+        Why uses ?
+            To allow external functions or other classes to interact with private data.
+            To enable operations involving multiple classes, like comparing or combining objects.
+            To maintain encapsulation while selectively exposing internals.
+
+        |-----------------|---------------------------------------------------------|
+        | Feature	      | Description                                             |
+        |-----------------|---------------------------------------------------------|
+        | Not a member	  | Friend functions are not members of the class           |
+        |-----------------|---------------------------------------------------------|
+        | Declared inside |	Must be declared inside the class using friend keyword  |
+        |-----------------|---------------------------------------------------------|
+        | Defined outside |	Defined like any normal function                        |
+        |-----------------|---------------------------------------------------------|
+        | Access level	  | Can access private and protected members                |
+        |-----------------|---------------------------------------------------------|
+
+    Const keyword
+        The const keyword in C++ is a powerful tool that enforces immutability, meaning it prevents variables, pointers, functions, or objects from being modified after they’re defined. It’s all about protecting data and making your code safer, clearer, and more predictable.
+        Must be initialized at declaration.
+        Cannot be changed later.
+        Great for fixed values like limits, configuration, or mathematical constants.
+
 

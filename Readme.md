@@ -69,20 +69,16 @@ DSA(root)/
 |   |   ├── Input & Output 
 |   |   ├── Variables & DataTypes
 |   |   ├── Operaters
-|   |   └── Questions
 |   ├── Conditiional/
 |   |   ├── if / else
 |   |   ├── conditioanl laddar
-|   |   ├── Switch
-|   |   └── Questions
+|   |   └── Switch
 |   ├── Loop/
 |   |   ├── for
 |   |   ├── while
 |   |   ├── do while
-|   |   └── Questions
 |   |   └── break & continue
 |   ├── Pattern-Printing/
-|   |   ├── Questions
 |   |   ├── core/ 
 |   |   |   ├── star
 |   |   |   ├── Number
@@ -98,48 +94,38 @@ DSA(root)/
 |   |   ├── No parameters, no return value
 |   |   ├── Parameters, no return value
 |   |   ├── No parameters, return value
-|   |   ├── Questions
 |   |   └── Parameters and return value
 |   ├── Pointer and Function/
 |   |   ├── Wild Pointer
 |   |   ├── NULL Pointer
 |   |   ├── Void Pointers
-|   |   ├── Questions
 |   |   └── Dangling Pointer
 |   ├── Array/
 |   |   ├── 1Darray
-|   |   ├── multiDimensionalArray
-|   |   └──  Questions
+|   |   └── multiDimensionalArray
 |   ├── String/
-|   |   ├── specific-Topic
-|   |   └──  Questions
 |   ├── Time&Space-Complexity/
 |   |   ├── O(n*n)
 |   |   ├── O(n)
 |   |   ├── O(log*n)
 |   |   ├── O(n*log*n)
-|   |   ├── O(n*log*n)
-|   |   └──   Questions
+|   |   └── O(n*log*n)
 |   ├── Sorting/
 |   |   ├── Advanced/
 |   |   |   ├── Merge Sort
 |   |   |   ├── Quick Sort
-|   |   |   ├── Cyclic Sort
-|   |   |   └──  Questions
+|   |   |   └── Cyclic Sort
 |   |   ├── Bubble Sort
 |   |   ├── Insertion Sort
-|   |   ├── Selection Sort
-|   |   └──  Questions
+|   |   └── Selection Sort
 |   ├── Searching/
 |   |   ├── Linear Search
-|   |   ├── Binary Search
-|   |   └──  Questions
+|   |   └── Binary Search
 |   ├── Recursion/
 |   ├── Special-Algorithm/
 |   |   ├── Prefix Sum
 |   |   ├── Sliding Window
-|   |   ├── Prime Number & Sieve Eratosthenes
-|   |   └──  Questions
+|   |   └── Prime Number & Sieve Eratosthenes
 |   ├── OOP/
 |   |   ├── Class
 |   |   ├── Object
@@ -147,8 +133,7 @@ DSA(root)/
 |   |   ├── Encapsulation
 |   |   ├── Polymorphism
 |   |   ├── Inheritance
-|   |   ├── Abstraction
-|   |   └──  Questions
+|   |   └── Abstraction
 |   ├── Linked-list/
 |   ├── Stacks/
 |   ├── Queues/
