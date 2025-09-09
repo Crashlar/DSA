@@ -1076,3 +1076,33 @@ OOP
         Great for fixed values like limits, configuration, or mathematical constants.
 
 
+---linked list/note---
+____________________________________________________________Day 7_______________________________________________________________________________________________
+Thrusday 08/09/2025     Starttime - 10 Am 
+
+
+Linked-list
+    Linked List
+    can't follow continuous memory 
+    collection of nodes 
+    wastege is lower than array 
+    insert or shift -> o(1) [provided location are known]
+    on runtime dynamically grow and shnk further 
+
+    Linked list is a collection of node it is a linear data structure with non- contigous memory location through created 
+
+    
+    magical-Linked # mine
+        L.L in Hindi 
+
+    Types 
+        1. Singly linked list 
+        2. doubly linked list
+        3. circular Singly linked list
+        4. circular Singly linked list
+
+    
+    Insert at head 
+        make sure use pass by reference 
+    
+
