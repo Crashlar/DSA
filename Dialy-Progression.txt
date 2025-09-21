@@ -1106,3 +1106,126 @@ Linked-list
         make sure use pass by reference 
     
 
+____________________________________________________________Day 8_______________________________________________________________________________________________
+Thrusday 15/09/2025     Starttime - 10 Am
+
+Stacks
+
+    What is Stacks?
+        provides us discipline 
+        provides us intuition 
+        called as LIFO (last in First out )  / FILO (first in last out )
+        Stack size is unlimited as linked list 
+        Example- CD Rack
+    
+    If I want to access the cd of middle place 
+        1. Insertion of element in Stack only happens at the top 
+        2. Deletion of element in Stack only happens at the top 
+        3. get element only happens at the top 
+    
+    Operation on Stack
+        1. st.push(variable)
+            add a new element at the top 
+        2. st.pop() 
+            Deletion of the yop element 
+        3. st.top()
+            access the top value / element 
+
+    No setting in Stack like first remove top then insert or place variable on top 
+
+    STL for Stack
+        stack<int> st; 
+            Operation using :
+                st.push();
+                st.pop();
+                st.top();
+                st.size();
+                st.empty();
+        vector<int> v ; 
+            for vector 
+
+    How to Print element of a stack ? 
+            while (st.size() > 0)
+            {
+                cout << st.top() << " ";
+                st.pop();
+            }
+                But the problem is that the stack is totally deleted after print
+                so we will using the temp variable as a copy of original stack 
+                USING THIS CODE ```
+                    stack<int> temp;
+                    while (st.size() > 0)
+                    {
+                        cout << st.top() << " ";
+                        temp.push(st.top());
+                        st.pop();
+                    }
+
+                    // putting element back from tem to st
+
+                    while (temp.size() > 0 )
+                    {
+                        st.push(temp.top());
+                        temp.pop();
+                    }
+                    ````
+
+    Comparing Arrays, Linked Lists and Stacks     
+        Time Complexity and Space Complexity 
+
+        |------------|---------------|------------------|
+        |       arr  | LL            |stack             |    
+        |------------|---------------|------------------|
+        |0(1) 0(1)   | 0(n) 0(1)     | 0(n)  0(n)       |   get  
+        |------------|---------------|------------------|
+        |0(n) 0(n)   | 0(n) 0(1)     | 0(n)  0(n)       |   insert
+        |------------|---------------|------------------|
+        |0(n) 0(n)   | 0(n) 0(1)     | 0(n)  0(n)       |   delete
+        |------------|---------------|------------------|
+
+    Reverse a Stack
+        Already done [existing stack empty karke doosre stack me daal rahe hai for eg. on above st -> temp ]
+
+        1. Use two extra stack get  & repeat to st stack 
+        2. Using an extra array 
+            a. creating a same size as stack to create a vector 
+            b. then pop to push 
+            c. then push to original stack 
+
+
+    Push element at bottom / any index 
+         pushAtIndex(st , indexposition , value)
+        while(st.size > indexposition){}
+
+    Reverse stack recursively 
+        Display a stCK USING recursion
+        folloe -> recursionInstack.cpp
+
+    Overflow
+        If your stack is full , then if you try to push an element then return error 
+
+    UnderFlow
+        If in an empty stack , I try to perform these two functions -> st.pop() , st.top() using this not returning error but and printing anything on terminal 
+
+    Array/Vector Implementation
+    Linked List Implementation
+
+    Balanced Bracket 
+        (())() true 
+        (()() not 
+        )()(  not 
+        step 1: If you see opening bracket -> push 
+        step 2 : if you see a closing bkt , 
+            st-> top ko dekho  , agar top pe "(" ho to st.pop()
+            else return false
+        step 3 :
+            if st.empty()  -> true
+            else false
+
+    Next greater element
+    CanSeePersonCount
+    SlidingWindow
+    
+
+
+
