@@ -4,6 +4,7 @@ public class CharDataType {
         
         char x = 'M';
 
+        System.out.println((int)x);
         System.out.println(x);
 
     }

@@ -1080,7 +1080,6 @@ OOP
 ____________________________________________________________Day 7_______________________________________________________________________________________________
 Thrusday 08/09/2025     Starttime - 10 Am 
 
-
 Linked-list
     Linked List
     can't follow continuous memory 
@@ -1225,7 +1224,54 @@ Stacks
     Next greater element
     CanSeePersonCount
     SlidingWindow
+
+____________________________________________________________Day 9_______________________________________________________________________________________________
+Queues 
+
+    Introduction
+        follow `FIFO(First in First out)
     
+    Queues Vs Stack 
+        LIFO - in stack 
+        Stacks and queues are fundamental data structures that differ in how they manage elements. A **stack** follows the **Last In, First Out (LIFO)** principle, meaning the most recently added item is the first to be removed—like a stack of books where you take the top one off first. In contrast, a **queue** operates on a **First In, First Out (FIFO)** basis, where the earliest added item is the first to leave—similar to people waiting in line at a ticket counter. Stacks are ideal for tasks like undo operations or parsing expressions, while queues are used in scheduling, buffering, and breadth-first search. Understanding their behavior helps in choosing the right structure for efficient problem-solving.
+    
+    Structure 
+
+        Enqueue (Push) here              Dequeue (Pop) here
+                    ↓                                    ↓
+                ┌───────┬───────┬───────┬───────┬───────┬───────┬───────┐
+            Rear → │ elem7 │ elem6 │ elem5 │ elem4 │ elem3 │ elem2 │ elem1 │ ← Front
+                └───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+                                    (Direction of elements moving forward)
+
+    Methods
+        push()
+            insertion happen only at the back / rear
+        pop()
+            only happen at front 0(1) complexity have
+        front()
+            we can access the front of the queue
+        back()
+            we can access the rear element 
+        empty()
+            it's return true if size == 0 else return False
+        
+        Overflow 
+            only happen if we implement the queue via an array if you fill the array 
+            you are out of memory
+        UnderFlow
+            Whenever the queue is empty we try to use these functions pop() , front() , back()
+
+    Display/print
+
+        T.C = 0(n)
+        S.C = 0(1)
+
+    array implementation 
+         
+____________________________________________________________Day 10_______________________________________________________________________________________________
+   
+
 
 
 

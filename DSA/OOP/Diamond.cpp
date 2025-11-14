@@ -7,7 +7,14 @@ public:
         cout << "Class A (virtual)\n";
     }
 };
-
+// this is virtual class 
+// BUG:
+// TODO:
+// HACK:
+// FIXME:
+// NOTE:
+// INFO:
+// IDEA: This is not the perfect solution 
 class B : virtual public A {
 };
 
@@ -20,7 +27,7 @@ class D : public B, public C {
 
 int main() {
     D obj;
-    obj.show(); // ✅ No ambiguity now
+    obj.show(); //  No ambiguity now
 
     return 0;
 }

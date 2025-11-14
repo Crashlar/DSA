@@ -1,3 +1,4 @@
+// package Studies.OOP;
 public class Person {
     String name; 
     public int age ;
@@ -23,3 +24,4 @@ public class Person {
         m.printAttributes();
     }
 }
+
